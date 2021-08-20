@@ -1,6 +1,10 @@
 #!/bin/bash
 clear
-
+#——————————————————
+# CRIADOR POR @CRAZY_VPN
+# VERSAO 1.0
+# SLOW DNS TUNNEL
+#——————————————————
 RED='\033[1;31m'
 GREEN='\033[1;32m'
 YELLOW='\033[1;33m'
@@ -20,9 +24,9 @@ installslowdns() {
 	    conexao
 	}
     mkdir /etc/VPSManager/dns >/dev/null 2>&1
-    wget -P $DIR https://github.com/NT-GIT-HUB/VPS-MANAGER-1.0/raw/main/Modulos/dns-server >/dev/null 2>&1  
-    chmod 777 $DIR/dns-server >/dev/null 2>&1
-    $DIR/dns-server -gen-key -privkey-file $DIR/server.key -pubkey-file $DIR/server.pub >/dev/null 2>&1
+    wget -P $DIR https://github.com/NT-GIT-HUB/VPS-MANAGER-1.0/raw/main/Modulos/slow_dns_device >/dev/null 2>&1  
+    chmod 777 $DIR/slow_dns_device >/dev/null 2>&1
+    $DIR/slow_dns_device -gen-key -privkey-file $DIR/server.key -pubkey-file $DIR/server.pub >/dev/null 2>&1
     configdns() {
         interface=$(ip a |awk '/state UP/{print $2}'| cut -d: -f1)
         iptables -F >/dev/null 2>&1
@@ -40,7 +44,7 @@ installslowdns() {
     cat /dev/null > ~/.bash_history && history -c
 }
 initslow() {
-    if ps x | grep -w dns-server | grep -v grep 1>/dev/null 2>/dev/null; then 
+    if ps x | grep -w slow_dns_device | grep -v grep 1>/dev/null 2>/dev/null; then 
         screen -r -S "slow_dns" -X quit >/dev/null 2>&1
         screen -wipe > /dev/null 2>&1
         sed -i '/slow_dns/d' /etc/autostart
@@ -70,10 +74,10 @@ initslow() {
         fi
         [[ $opcc == '1' ]] 
         cd /etc/VPSManager/dns
-        screen -dmS slow_dns ./dns-server -udp :5300 -privkey-file server.key ${ns} 0.0.0.0:${ptdns} >/dev/null 2>&1
+        screen -dmS slow_dns ./slow_dns_device -udp :5300 -privkey-file server.key ${ns} 0.0.0.0:${ptdns} >/dev/null 2>&1
         keypub=$(cat $DIR/server.pub)
         cd $HOME
-        echo "ps x | grep 'slow_dns' | grep -v 'grep' || screen -dmS slow_dns $DIR/dns-server -udp :5300 -privkey-file /etc/VPSManager/dns/server.key ${ns} 0.0.0.0:${ptdns}" >> /etc/autostart
+        echo "ps x | grep 'slow_dns' | grep -v 'grep' || screen -dmS slow_dns $DIR/slow_dns_device -udp :5300 -privkey-file /etc/VPSManager/dns/server.key ${ns} 0.0.0.0:${ptdns}" >> /etc/autostart
         tmx='curl -sO https://sshplus.net/scripts/slowdns && chmod +x slowdns && ./slowdns'
         echo -e "\n${GREEN}SLOWDNS ATIVADO !${SCOLOR}"
         echo -e "\n${YELLOW}COMANDO TERMUX${SCOLOR}: ${tmx} ${ns} ${keypub}"
