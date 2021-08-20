@@ -1,7 +1,5 @@
 #!/bin/bash
-#====================================================
-#	@kiritosshxd
-#====================================================
+
 _lvk=$(wget -qO- https://raw.githubusercontent.com/NT-GIT-HUB/VPS-MANAGER-1.0/main/Sistema/versao)
 IP=$(wget -qO- ipv4.icanhazip.com)
 IP2=$(wget -qO- http://whatismyip.akamai.com/)
