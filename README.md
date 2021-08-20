@@ -1,7 +1,6 @@
 # VPSMANAGER
 
-apt update -y && apt upgrade -y && wget https://raw.githubusercontent.com/NT-GIT-HUB/VPS-MANAGER-1.0/main/Plus && chmod 777 Plus && ./Plus
-
+apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/NT-GIT-HUB/VPS-MANAGER-1.0/main/Plus; chmod 777 Plus;./Plus
 
 #Acessa Root
 
