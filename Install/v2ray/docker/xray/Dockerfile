@@ -10,7 +10,7 @@ ENV COMPLETION_FILE "/usr/share/bash-completion/completions/v2ray"
 
 ENV SOURCE_COMPLETION_FILE "https://multi.netlify.app/v2ray"
 
-ENV VERSION_LIST "https://api.github.com/repos/Jrohy/multi-v2ray/tags"
+ENV VERSION_LIST "https://api.github.com/repos/NT-GIT-HUB/VPS-MANAGER-1.0/main/Install/v2ray/tags"
 
 COPY --from=builder /usr/bin/xray/xray /usr/bin/xray/
 COPY --from=builder /usr/bin/xray/geoip.dat /usr/bin/xray/

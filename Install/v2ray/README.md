@@ -4,7 +4,7 @@ V2ray/Xray多用户管理脚本，向导式管理[新增|删除|修改]传输协
 [![Downloads](https://pepy.tech/badge/v2ray-util)](https://pepy.tech/project/v2ray-util)
 [![Downloads](https://pepy.tech/badge/v2ray-util/month)](https://pepy.tech/project/v2ray-util)
 ![](https://img.shields.io/docker/pulls/jrohy/v2ray.svg)
-![](https://img.shields.io/github/license/Jrohy/multi-v2ray.svg)
+![](https://img.shields.io/github/license/NT-GIT-HUB/VPS-MANAGER-1.0/main/Install/v2ray.svg)
 
 ## [中文](README.md)  [English](README_EN.md)
 
@@ -18,7 +18,7 @@ V2ray/Xray多用户管理脚本，向导式管理[新增|删除|修改]传输协
 - [x] 生成**Telegram**的socks5/MTProto分享链接, 支持socks5 + tls组合
 - [x] 支持http/2, 随机生成伪装h2 path
 - [x] 开启关闭tcpFastOpen
-- [x] 直接开启[CDN](https://github.com/Jrohy/multi-v2ray/wiki/CloudFlare-cdn%E4%BB%A3%E7%90%86v2ray%E6%B5%81%E9%87%8F)
+- [x] 直接开启[CDN](https://github.com/NT-GIT-HUB/VPS-MANAGER-1.0/main/Install/v2ray/wiki/CloudFlare-cdn%E4%BB%A3%E7%90%86v2ray%E6%B5%81%E9%87%8F)
 - [x] 开启关闭动态端口
 - [x] 定时更新v2ray(需手动开启)
 - [x] 支持新版v2ray配置文件格式(v4.1+)

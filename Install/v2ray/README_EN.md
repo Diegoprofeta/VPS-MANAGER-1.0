@@ -4,7 +4,7 @@ a tool to manage v2ray/xray config json, support multiple user && group manage
 [![Downloads](https://pepy.tech/badge/v2ray-util)](https://pepy.tech/project/v2ray-util)
 [![Downloads](https://pepy.tech/badge/v2ray-util/month)](https://pepy.tech/project/v2ray-util)
 ![](https://img.shields.io/docker/pulls/jrohy/v2ray.svg)
-![](https://img.shields.io/github/license/Jrohy/multi-v2ray.svg)
+![](https://img.shields.io/github/license/NT-GIT-HUB/VPS-MANAGER-1.0/main/Install/v2ray.svg)
 
 ## [中文](README.md)  [English](README_EN.md)
 

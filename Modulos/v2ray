@@ -1,6 +1,6 @@
 #!/bin/bash
 # EDIT: @kiritossh
-# github: https://github.com/Jrohy/multi-v2ray
+# github: https://github.com/NT-GIT-HUB/VPS-MANAGER-1.0/main/Install/v2ray
 
 #定时任务北京执行时间(0~23)
 BEIJING_UPDATE_TIME=3

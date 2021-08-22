@@ -16,7 +16,7 @@ setup(
     keywords='python v2ray multi-v2ray vmess socks5 vless trojan xray xtls',
     author='Jrohy',
     author_email='euvkzx@gmail.com',
-    url='https://github.com/Jrohy/multi-v2ray',
+    url='https://github.com/NT-GIT-HUB/VPS-MANAGER-1.0/main/Install/v2ray',
     license='GPL',
     packages=find_packages(),
     include_package_data=True,
