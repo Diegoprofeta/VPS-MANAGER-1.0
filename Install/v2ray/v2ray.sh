@@ -1,5 +1,5 @@
 #!/bin/bash
-# EDIT: @kiritossh
+# Author: Jrohy
 # github: https://github.com/Jrohy/multi-v2ray
 
 #定时任务北京执行时间(0~23)
@@ -82,12 +82,12 @@ help(){
 
 removeV2Ray() {
     #卸载V2ray脚本
-    bash <(curl -L -s https://raw.githubusercontent.com/NT-GIT-HUB/VPS-MANAGER-1.0/main/Install/v2ray/go.sh) --remove >/dev/null 2>&1
+    bash <(curl -L -s https://multi.netlify.app/go.sh) --remove >/dev/null 2>&1
     rm -rf /etc/v2ray >/dev/null 2>&1
     rm -rf /var/log/v2ray >/dev/null 2>&1
 
     #卸载Xray脚本
-    bash <(curl -L -s https://raw.githubusercontent.com/NT-GIT-HUB/VPS-MANAGER-1.0/main/Install/v2ray/go.sh) --remove -x >/dev/null 2>&1
+    bash <(curl -L -s https://multi.netlify.app/go.sh) --remove -x >/dev/null 2>&1
     rm -rf /etc/xray >/dev/null 2>&1
     rm -rf /var/log/xray >/dev/null 2>&1
 
@@ -156,7 +156,7 @@ installDependent(){
     fi
 
     #install python3 & pip
-    source <(curl -sL https://raw.githubusercontent.com/NT-GIT-HUB/VPS-MANAGER-1.0/main/Install/v2ray/install.sh)
+    source <(curl -sL https://python3.netlify.app/install.sh)
 }
 
 updateProject() {
@@ -191,7 +191,7 @@ updateProject() {
     fi
     
     #安装V2ray主程序
-    [[ ${INSTALL_WAY} == 0 ]] && bash <(curl -L -s https://raw.githubusercontent.com/NT-GIT-HUB/VPS-MANAGER-1.0/main/Install/v2ray/go.sh)
+    [[ ${INSTALL_WAY} == 0 ]] && bash <(curl -L -s https://multi.netlify.app/go.sh)
 }
 
 #时间同步
@@ -235,10 +235,9 @@ installFinish() {
     if [[ ${INSTALL_WAY} == 0 ]]; then
         clear
 
-        echo -e "\n\033[1;32mV2RAY INSTALADO COM SUCESSO !\033[0m"
         v2ray info
 
-        echo -e "Por favor insira o comando 'v2ray' para gerenciar v2ray\n"
+        echo -e "please input 'v2ray' command to manage v2ray\n"
     fi
 }
 
