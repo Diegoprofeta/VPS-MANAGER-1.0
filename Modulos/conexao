@@ -460,8 +460,6 @@ SCOLOR='\033[0m'
 			}
 		fi
 	}
-
-
 fun_v2rayins() {
 			clear
 	        v2rayinst(){
@@ -492,7 +490,6 @@ fun_v2rayins() {
 	            v2rayinst
             fi
         }
-
     fun_chisel() {
 		clear
 		echo -e "\E[44;1;37m            GERENCIAR CHISEL             \E[0m"
